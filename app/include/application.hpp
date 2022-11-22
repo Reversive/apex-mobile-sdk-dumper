@@ -2,6 +2,7 @@
 #define APPLICATION_HPP
 #include <cli.hpp>
 #include <parser.hpp>
+#include <sdk.hpp>
 
 class Application
 {
