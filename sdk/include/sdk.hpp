@@ -1,6 +1,7 @@
 #ifndef SDK_HPP
 #define SDK_HPP
 #include <syscall.hpp>
+#include <string>
 
 class SDK
 {
@@ -13,7 +14,7 @@ private:
 public:
     SDK(void *pLibUE4, void *pFNamePool, void *pUObjectArray, pid_t pid);
     ~SDK();
-    bool DumpSDK();
+    bool DumpSDK(const std::string &outputFilename);
 };
 
 #endif

@@ -10,7 +10,7 @@ SDK::~SDK()
     delete m_Syscall;
 }
 
-bool SDK::DumpSDK()
+bool SDK::DumpSDK(const std::string &outputFilename)
 {
 
     return true;

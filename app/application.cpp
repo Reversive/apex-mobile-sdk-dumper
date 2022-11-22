@@ -31,11 +31,15 @@ void Application::Run(int argc, char **argv)
 
     Info("libUE4.so - base: %p", pLibUE4);
 
-    SDK sdk = new SDK(pLibUE4, parser.FNamePool(), parser.GObject(), targetPid);
-    if (!sdk.DumpSDK())
+    SDK *sdk = new SDK(pLibUE4, parser.FNamePool(), parser.GObject(), targetPid);
+    std::string sdkFileName = parser.PackageName() + ".sdk.txt";
+    if (!sdk->DumpSDK(sdkFileName))
     {
+        Error("Failed to dump sdk");
         return;
     }
+
+    delete sdk;
 
     Info("Dumped SDK");
 }

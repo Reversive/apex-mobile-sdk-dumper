@@ -23,7 +23,7 @@ LOCAL_SRC_FILES := 	entry_point.cpp \
 					logger/logger.cpp \
 					parser/parser.cpp \
 					syscall/syscall.cpp \
-					
+					sdk/sdk.cpp
 
 
 
